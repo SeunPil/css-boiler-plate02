@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+/*  */
+a {
+    /* 부모태그 상속 */
+    color: inherit;
+    /* 밑줄 X */
+    text-decoration: none;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+/* common */
+.wrap {
+    font: 15px "Noto Sans KR", sans-serif;
+}
+
+/* header */
+header {
+    width: 100%;
+    /* 포지션 고정, 우선순위 100 */
+    position: fixed;
+    z-index: 100;
+}
+
+header .inner-header {
+    /* header 100%에 대한 92% */
+    /* 제일 큰 박스 */
+    width: 92%;
+    height: 120px;
+    margin: 0 auto;
+    /* flex : space-beetween = 92%에 대한 동일한 간격 */
+    /* flex (align-items) : 로고사진, welcome, menu 중앙배치 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* flex: 1:4:1 ( 92%에 대한 비율 ) */
+
+header .inner-header .logo {
+
+    flex: 1;
+
+}
+
+header .inner-header .logo a {
+    /* 로고 사진을 감싸는 박스 */
+    display: block;
+    width: 100%;
+}
+
+header .inner-header .logo a img {
+    /* 로고 사진 */
+    height: 60px;
+}
+
+header .inner-header .intro-text {
+    flex: 4;
+    /* 로고와 간격 벌리고, 대문자 설정 */
+    margin-left: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+header .inner-header .menu-open {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    /* MENU와 아이콘이 단차가 안맞을 때 큰 박스 중앙정렬 */
+    /* flex-end = 박스의 맨 끝으로 보내기 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .inner-header .menu-open .lnr-menu {
+    /* 햄버거 메뉴 설정 */
+    font-size: 33px;
+    margin-left: 15px;
+}
+
+/* menu navigation bar */
+header .gnb {
+    display: none;
+}
