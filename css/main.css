@@ -304,3 +304,38 @@ section.contents .project ul li a:hover::before {
         bottom: 10px;
     }
 }
+
+/* section contents .partner style */
+
+section.contents .partner {
+    width: 1170px;
+    margin: 170px auto 100px;
+    color: #fff;
+}
+
+section.contents .partner h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+section.contents .partner ul {
+    display: grid;
+    grid-template-rows: repeat(2,150px);
+    grid-template-columns: repeat(4, 1fr);
+
+    /* 로고들 중앙정렬 */
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+section.contents .partner ul li img {
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+section.contents .partner ul li:hover img {
+    opacity: 1;
+
+}
