@@ -94,7 +94,7 @@ header .gnb {
 
 
 /* section visual */
-section.visual .slide li{
+section.visual .slide li {
     /* //Scroll down 까지 */
     width: 100%;
     height: 100vh;
@@ -113,7 +113,7 @@ section.visual .slide li img {
     top: 0;
 }
 
-section.visual .slide li .txt{
+section.visual .slide li .txt {
     font-size: 18px;
     color: #fff;
     /* 중앙배치 정렬 */
@@ -122,7 +122,7 @@ section.visual .slide li .txt{
     top: 50%;
     transform: translate(-50%, -50%);
     /* 그림자: 가로 세로 블러 효과 */
-    text-shadow: 3px 3px 5px rgba(0,0,0, 0.8);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
 section.visual .slide li .txt h3 {
@@ -148,6 +148,7 @@ section.visual .slide li .scroll {
     font-size: 14px;
     font-weight: 700;
 }
+
 /* //section visual */
 
 
@@ -158,7 +159,7 @@ section.contents {
 }
 
 /* section contents > .main-text */
-section.contents .main-text{
+section.contents .main-text {
     width: 1170px;
     /* 중앙정렬 */
     margin: 0 auto;
@@ -172,7 +173,7 @@ section.contents .main-text{
 
 /* 박스 안에 있는 text 두 박스 */
 /* 1 : 1.5의 비율 */
-section.contents .main-text h3{
+section.contents .main-text h3 {
     flex: 1;
     font-weight: 700;
     line-height: 1.2;
@@ -194,21 +195,112 @@ section.contents .main-text p span {
 
 /* 이미지 만들기 */
 
-section.contents .main-text::before{
-    content: '';
-    background: #ffec03;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absoulte;
-    left: 70px;
-    top: 130px;
+
+
+
+/* .project : style */
+
+section.contents .project {
+    color: #fff;
 }
 
-section.contents .main-text::after{
-    content: '”';
-    font-size: 300px;
+section.contents .project .top {
+    width: 1170px;
+    margin: 130px auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contents .project .top h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+section.contents .project .top a {
+    display: block;
+    font-size: 18px;
+}
+
+section.contents .project .top a span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+section.contents .project ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.contents .project ul li {
+    height: 400px;
+    position: relative;
+}
+
+section.contents .project ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a img {
+    width: 100%;
+    height: 100%;
+}
+
+section.contents .project ul li a .name {
     position: absolute;
-    left: 0;
-    top: 50px;
+    right: 10px;
+    bottom: 10px;
+    background: #1b1b1b;
+    padding: 15px;
+    width: 250px;
+    text-align: right;
+    font-size: 22px;
+    box-sizing: border-box;
+
+    /* 투명도 설정 */
+    opacity: 0;
+}
+
+section.contents .project ul li a:hover .name {
+    opacity: 1;
+    animation: rise-up 1s;
+
+}
+
+section.contents .project ul li a .name span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+section.contents .project ul li a .name h3 {
+    /* 대문자 설정 */
+    text-transform: uppercase;
+}
+
+section.contents .project ul li a::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: rgba(27, 27, 27, .9);
+    position: absolute;
+}
+
+section.contents .project ul li a:hover::before {
+    width: 100%;
+    transition: 1s;
+}
+
+
+@keyframes rise-up {
+    0% {
+        opacity: 0;
+        bottom: -10%;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 10px;
+    }
 }
